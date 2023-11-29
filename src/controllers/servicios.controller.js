@@ -18,14 +18,8 @@ export const createProducto = async (req, res) => {
     }
 }
 export const findOneProducto = async (req, res) => {
-    const producto = await productos.find();
-    let listProductos = [];
-    for (let i = 0; i < producto.length; i++) {
-        if (producto[i]["placa"] == req.params.placa) {
-            listProductos.push(producto[i]);
-        }
-    }
-    return res.json(listProductos);
+    const producto = await productos.findAllProducto(req.params.placa);
+    return res.json(producto);
 }
 
 export const deleteProducto = async (req, res) => {
