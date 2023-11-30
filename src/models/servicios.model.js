@@ -13,7 +13,7 @@ const datosDeReparacionSchema = new Schema({
         require: [true, 'El campo placa es requerido'],
         trim: true
     }, horaReparacion: {
-        type: Date,
+        type: Number,
         unique: false,
         require: [true, 'El campo horaReparacion es requerido'],
         trim: true
