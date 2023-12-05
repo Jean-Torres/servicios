@@ -17,7 +17,13 @@ const datosDeReparacionSchema = new Schema({
         unique: false,
         require: [true, 'El campo horaReparacion es requerido'],
         trim: true
-    },precioReparacion: {
+    },precioDolar: {
+        type: Number,
+        unique: false,
+        require: [true, 'El campo precioDolars es requerido'],
+        trim: true
+    },
+    precioReparacion: {
         type: Number,
         unique: false,
         require: [true, 'El campo precioReparacion es requerido'],

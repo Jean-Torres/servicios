@@ -8,7 +8,8 @@ export const findAllProducto = async (req, res) => {
 export const createProducto = async (req, res) => {
     try {
         const producto = new productos({
-            numero: req.body.numero, placa: req.body.placa, horaReparacion: req.body.horaReparacion, precioReparacion: req.body.precioReparacion,
+            numero: req.body.numero, placa: req.body.placa, horaReparacion: req.body.horaReparacion,
+             precioReparacion: req.body.precioReparacion, precioDolar: req.body.precioDolar,
             observaciones: req.body.observaciones
         })
         const newProducto = await producto.save();
